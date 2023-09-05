@@ -1,0 +1,29 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+@model Login
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Session Workshop</title>
+</head>
+
+<body>
+    <div class="text-center m-3">
+        <h1>Welcome!</h1>
+        <h5 class="m-3">Please Give Your Name:</h5>
+        <form asp-action="CreateLogin" method="post">
+            <div>
+                <input class="text-center" placeholder="Name Here..." asp-for="Name">
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <button class="m-3 btn btn-success" type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+
+</html>

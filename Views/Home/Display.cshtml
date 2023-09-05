@@ -1,0 +1,22 @@
+<div class="container text-center">
+    <div class="d-flex justify-content-between border-bottom border-dark">
+        <h3 class="m-3">Welcome @Context.Session.GetString("Name")!</h3>
+        <a class="btn btn-danger m-3" asp-action="Index" asp-controller="Home">Logout</a>
+    </div>
+    <h1 class="m-3">@Context.Session.GetInt32("Answer")</h1>
+    <div class="row justify-content-center ">
+        <form asp-action="AddOne" method="post" class="w-50 m-1">
+            <button class="btn btn-warning col" type="submit">+1</button>
+        </form>
+        <form asp-action="SubOne" method="post" class="w-50 m-1">
+            <button class="btn btn-primary col" type="submit">-1</button>
+        </form>
+        <div class="w-100"></div>
+        <form asp-action="TimesTwo" method="post" class="w-50 m-1">
+            <button class="btn btn-danger col" type="submit">x2</button>
+        </form>
+        <form asp-action="RandomValue" method="post" class="w-50 m-1">
+            <button class="btn btn-success col" type="submit">+Random</button>
+        </form>
+    </div>
+</div>
